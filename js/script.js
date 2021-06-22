@@ -1,5 +1,7 @@
 const app = new Vue({
+    // dichiarazione elemento chiave
     el : '#app',
+    // dichiarazione dei dati
     data : {
         contatore : 0,
         immagini : [
@@ -11,6 +13,7 @@ const app = new Vue({
             'img/img6.jpg'
         ]
     },
+    // dichiarazione delle funzioni / metodi
     methods : {
         nextPic : function () {
             (this.contatore == this.immagini.length - 1) ? this.contatore = 0 : this.contatore++;
@@ -22,11 +25,14 @@ const app = new Vue({
             this.contatore = index;
         }
     },
+    // dichiarazione delle funzioni al caricamento della pagina
     created : function(){
+        //* intervallo per scorrimento automatico con richiamo di funzione
         setInterval(() => {
-            (this.contatore == this.immagini.length - 1) ? this.contatore = 0 : this.contatore++;
+            this.nextPic();
         }, 3000);
         
+        //* ascolta i pulsanti della tastiera per richiamare le funzioni di cambio immagine
         document.addEventListener('keyup', (e) => {
             if(e.code == 'ArrowLeft'){
                 // console.log(this);
