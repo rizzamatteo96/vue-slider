@@ -12,13 +12,13 @@ const app = new Vue({
         ]
     },
     methods : {
-        nextPic() {
+        nextPic : function () {
             (this.contatore == this.immagini.length - 1) ? this.contatore = 0 : this.contatore++;
         },
-        prevPic() {
+        prevPic : function () {
             (this.contatore == 0) ? this.contatore = this.immagini.length - 1 : this.contatore--;
         },
-        selectPic(index){
+        selectPic : function (index) {
             this.contatore = index;
         }
     },
@@ -26,5 +26,16 @@ const app = new Vue({
         setInterval(() => {
             (this.contatore == this.immagini.length - 1) ? this.contatore = 0 : this.contatore++;
         }, 3000);
+        
+        document.addEventListener('keyup', (e) => {
+            if(e.code == 'ArrowLeft'){
+                // console.log(this);
+                this.prevPic();
+            }
+            else if(e.code == 'ArrowRight'){
+                // console.log(this);
+                this.nextPic();
+            }
+        });
     }
 });
