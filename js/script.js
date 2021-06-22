@@ -17,7 +17,7 @@ const app = new Vue({
             'img/img10.jpg',
             'img/img11.jpg',
             'img/img12.jpg',
-            'img/img13.jpg',
+            'img/img13.jpg'
         ]
     },
     // dichiarazione delle funzioni / metodi
