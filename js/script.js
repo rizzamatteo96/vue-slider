@@ -22,5 +22,10 @@ const app = new Vue({
         selectPic(index){
             this.contatore = index;
         }
+    },
+    created : function(){
+        setInterval(() => {
+            (this.contatore == this.immagini.length - 1) ? this.contatore = 0 : this.contatore++;
+        }, 3000);
     }
 });
