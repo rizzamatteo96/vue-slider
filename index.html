@@ -38,10 +38,7 @@
 
             <!-- inizio sezione marcatori foto -->
             <div class="markers">
-                <i class="fas fa-circle active"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle" v-for="(item, index) in immagini" :class="(index == contatore) ? 'active' : ''" @click="selectPic(index)"></i>
             </div>
             <!-- fine sezione marcatori foto -->
         </div>

@@ -6,7 +6,10 @@ const app = new Vue({
             'img/img1.jpg', 
             'img/img2.jpg',
             'img/img3.jpg',
-            'img/img4.jpg'
+            'img/img4.jpg',
+            'img/img5.jpg',
+            'img/img6.jpg',
+            'img/img7.jpg'
         ]
     },
     methods : {
@@ -15,6 +18,9 @@ const app = new Vue({
         },
         prevPic() {
             (this.contatore == 0) ? this.contatore = this.immagini.length - 1 : this.contatore--;
+        },
+        selectPic(index){
+            this.contatore = index;
         }
     }
 });
