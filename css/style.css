@@ -26,9 +26,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
-    height: 100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
     font-size: 40px;
+    position: absolute;
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
 }
 
 .prev:hover, .next:hover{
@@ -39,7 +49,7 @@
 
 .image{
     height: 100%;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
